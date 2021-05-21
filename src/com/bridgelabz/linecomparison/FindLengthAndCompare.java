@@ -3,7 +3,7 @@ package com.bridgelabz.linecomparison;
 import java.util.Scanner;
 
 public class FindLengthAndCompare {
-	public static void main(String[] args) {
+	public String linecomapare() {
 		//Scanner Class Object
 		Scanner scan = new Scanner(System.in);
 		
@@ -42,22 +42,16 @@ public class FindLengthAndCompare {
 		String FIRST_LINE = LENGTH1 + "";
 		String SECOND_LINE = LENGTH2 + "";
 		
-		//comparing using equals()
-		
-		if(FIRST_LINE.equals(SECOND_LINE))
-			System.out.println("Two lines are equal.");
-		else
-			System.out.println("Lines are not equal.");
 		
 		//comparing lines using compareTo method
 		
 		double CHECK_LEN = FIRST_LINE.compareTo(SECOND_LINE);
 		
 		if(CHECK_LEN == 0.0)
-			System.out.println("Lines are equal");
+			return"Lines are equal";
 		else if (CHECK_LEN < 0.0)
-			System.out.println("Line1 is Smaller");
+			return "Line1 is Smaller";
 		else
-			System.out.println("Line2 is Smaller ");
+			return "Line2 is Smaller ";
 	}
 }
